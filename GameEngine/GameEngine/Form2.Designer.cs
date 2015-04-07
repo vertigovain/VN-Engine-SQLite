@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -52,6 +53,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(445, 683);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "GitHubTest";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -59,6 +71,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
@@ -70,6 +83,7 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameWindow_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameWindow_MouseClick);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +91,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
     }
 }

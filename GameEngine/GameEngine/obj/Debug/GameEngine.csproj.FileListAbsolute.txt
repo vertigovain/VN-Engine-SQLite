@@ -24,3 +24,11 @@ D:\C# Project\GameEngine\GameEngine\bin\Debug\AxInterop.ShockwaveFlashObjects.dl
 D:\C# Project\GameEngine\GameEngine\obj\Debug\Interop.ShockwaveFlashObjects.dll
 D:\C# Project\GameEngine\GameEngine\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
 D:\C# Project\GameEngine\GameEngine\obj\Debug\GameEngine.csprojResolveAssemblyReference.cache
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\bin\Debug\GameEngine.exe.config
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\Interop.WMPLib.dll
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\GameEngine.csproj.ResolveComReference.cache
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\GameEngine.exe
+C:\Users\Enigma\Documents\GitHub\VN-Engine-SQLite\GameEngine\GameEngine\obj\Debug\GameEngine.pdb
