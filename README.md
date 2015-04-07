@@ -1,4 +1,6 @@
 # shift3novel_engine
+![My image](http://i.imgur.com/GSrVqbG.png)
+
 VIsual Novel Engine/Visual constructor  on C# , SQLite. (Early development, no assets)
 
 Visual Novel Engine and Visual Constructor written on C# with SQLite database as core.
@@ -19,3 +21,5 @@ Custom "decision/choice" dialogue component.
 
 Next Millenia:
 A demo VN based on the engine, with public assets and multiple minigames.
+
+
