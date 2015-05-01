@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EngineScripts\ScriptEngine.cs" />
     <Compile Include="EngineScripts\SQLEngine.cs" />
     <Compile Include="EngineScripts\TryHard.cs" />
     <Compile Include="Forms\StartMenu.cs">

@@ -42,27 +42,26 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(15, 151);
+            this.listBox1.Location = new System.Drawing.Point(15, 60);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(234, 260);
+            this.listBox1.Size = new System.Drawing.Size(139, 116);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 131);
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Select Scenario:";
-            
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(15, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(504, 108);
+            this.button1.Size = new System.Drawing.Size(139, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "New Game";
             this.button1.UseVisualStyleBackColor = true;
@@ -70,9 +69,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 439);
+            this.button2.Location = new System.Drawing.Point(15, 182);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(504, 106);
+            this.button2.Size = new System.Drawing.Size(139, 26);
             this.button2.TabIndex = 3;
             this.button2.Text = "Load Game";
             this.button2.UseVisualStyleBackColor = true;
@@ -80,9 +79,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 551);
+            this.button3.Location = new System.Drawing.Point(15, 214);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(504, 109);
+            this.button3.Size = new System.Drawing.Size(139, 26);
             this.button3.TabIndex = 4;
             this.button3.Text = "Constructor";
             this.button3.UseVisualStyleBackColor = true;
@@ -91,7 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 131);
+            this.label2.Location = new System.Drawing.Point(160, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 17);
             this.label2.TabIndex = 5;
@@ -99,9 +98,9 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(283, 151);
+            this.label3.Location = new System.Drawing.Point(160, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(233, 260);
+            this.label3.Size = new System.Drawing.Size(137, 197);
             this.label3.TabIndex = 6;
             this.label3.Text = "Text for Scenario Description goes here. Blabla Ergus numerus ectors francis.";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -109,9 +108,9 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightCoral;
-            this.button4.Location = new System.Drawing.Point(12, 667);
+            this.button4.Location = new System.Drawing.Point(15, 246);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(504, 71);
+            this.button4.Size = new System.Drawing.Size(139, 24);
             this.button4.TabIndex = 7;
             this.button4.Text = "Exit";
             this.button4.UseVisualStyleBackColor = false;
@@ -122,7 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(539, 750);
+            this.ClientSize = new System.Drawing.Size(311, 280);
             this.ControlBox = false;
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);

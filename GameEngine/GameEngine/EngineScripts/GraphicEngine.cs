@@ -13,10 +13,18 @@ using System.Windows.Forms;
 namespace GameEngine
 {
  
-    public class GraphicEngine 
-    {
-        
 
+    public static class GraphicEngine 
+    {
+
+        public static Bitmap BorderImage =  new Bitmap(@"G:\Temp\images\engine\border.png");
+        public static Bitmap BackgroundImage  = new Bitmap(@"G:\Temp\images\engine\border.png");
+        public static Color BackgroundColor = System.Drawing.Color.Black;
+        public static bool UseDominantColor;
+        public static int screenWidth=1920;
+        public static int screenHeight = 1080;
+        public static decimal xRatio = screenWidth / (decimal)1920;
+        public static decimal yRatio = screenHeight / (decimal)1080;
         /**-------------------MEMBERS-------------**/
         //private Graphics DrawHandle;
 
@@ -30,11 +38,15 @@ namespace GameEngine
         /**-----------------METHODS---------------**/
 
 
-        
+        public static Bitmap BGimg(string Path)
+        {
+            GraphicEngine.BackgroundImage = new Bitmap(Path);
+            return BackgroundImage;
+        }
 
-       
 
-        public void DrawCharacter
+
+        public static void DrawCharacter
             (object sender,
             //position
             int x1,
@@ -76,14 +88,9 @@ namespace GameEngine
                 
         }
 
-        public void DrawBackground
-            (object sender,
-             //Graphics pe,
-             System.Windows.Forms.PaintEventArgs pe,
-             //Image Path, difine like "@"G:\Temp\00.png"
-             Bitmap bmp,
-             Color BackgroundColor,
-             Bitmap BorderImage
+        public static void DrawBackground
+            (
+             System.Windows.Forms.PaintEventArgs pe
             )
 
         {
@@ -91,18 +98,18 @@ namespace GameEngine
 
             Graphics g = pe.Graphics;
            
-            decimal xHeight = bmp.Height;
-            decimal Ratio = 1080 / xHeight;
-            decimal xWidth = bmp.Width * Ratio;
-            int xPos = (1920 - (int)xWidth)/2;
-            Rectangle r = new Rectangle(xPos, 0, (int)xWidth, 1080);
-            g.DrawImage(bmp, xPos, 0, (int)xWidth, 1080);
+            decimal xHeight = BackgroundImage.Height;
+            decimal Ratio = screenHeight / xHeight;
+            decimal xWidth = BackgroundImage.Width * Ratio;
+            int xPos = (screenWidth - (int)xWidth)/2;
+            Rectangle r = new Rectangle(xPos, 0, (int)xWidth, screenHeight);
+            g.DrawImage(BackgroundImage, xPos, 0, (int)xWidth, screenHeight);
             //draw rectangles at left and right matching the image colors
             //Color Color = bmp.GetPixel(0, 0);
             SolidBrush brush = new SolidBrush(BackgroundColor);
-            g.FillRectangle(brush, 0, 0, xPos, 1080);
+            g.FillRectangle(brush, 0, 0, xPos, screenHeight);
             //brush.Color = Color;
-            g.FillRectangle(brush, xPos+(int)xWidth, 0, xPos, 1080);
+            g.FillRectangle(brush, xPos+(int)xWidth, 0, xPos, screenHeight);
 
 
             //g.DrawImage(BorderImage, xPos - 15, 0, BorderImage.Width, BorderImage.Height);
@@ -114,7 +121,7 @@ namespace GameEngine
 
         }
 
-        public void DrawTextarea
+        public static void DrawTextarea
            (object sender,
             //Graphics pe,
             System.Windows.Forms.PaintEventArgs pe,
@@ -124,14 +131,52 @@ namespace GameEngine
       {
 
             Graphics g = pe.Graphics;
+            decimal xHeight = bmp.Height * yRatio;
+            //MessageBox.Show(text: xHeight.ToString() + "screenHeight: " + screenHeight.ToString() + "  / screen ratio: " +yRatio.ToString());
+            decimal xWidth = bmp.Width * xRatio;
+            decimal yPos = screenHeight - xHeight;
+            g.DrawImage(bmp, 0, (int)yPos, (int)xWidth, (int)xHeight);
+            //g.DrawImage(bmp, 0,450 , 1280, 266);
+        }
 
+
+        public static void SetBackground()
+        {
+            GraphicEngine.BackgroundImage.Dispose();
+            GraphicEngine.BackgroundImage = GraphicEngine.BGimg(ScriptEngine.Path);
+            if (UseDominantColor == true)
+            { GraphicEngine.BackgroundColor = GameWindow.getDominantColor(GraphicEngine.BackgroundImage); }
+            else
+            { GraphicEngine.BackgroundColor = System.Drawing.Color.Black; }
+        }
+
+        public static void GetResolution()
+        {
+
+            Rectangle resolution = Screen.PrimaryScreen.Bounds;
+            GraphicEngine.screenWidth = resolution.Width;
+            GraphicEngine.screenHeight = resolution.Height;
+            xRatio = screenWidth / (decimal)1920;
+            yRatio = screenHeight / (decimal)1080;
+
+    }
+
+        public static int X(int x)
+        {
             
+            int x1  = (int)(xRatio * (decimal)x);
+            return x1;
+        }
 
-            g.DrawImage(bmp, 0, 700, bmp.Width, bmp.Height);
+        public static int Y(int x)
+        {
+            int x1 = (int)(yRatio * (decimal)x);
+            return x1;
         }
 
 
     }
+
 
 
 
